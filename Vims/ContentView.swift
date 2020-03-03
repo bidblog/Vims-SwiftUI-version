@@ -19,9 +19,11 @@ struct ContentView: View {
                     Text ("Er bruger logget ind")
                 }.padding()
                 
+                
                 NavigationLink(destination: LoginView()) {
                     Text ("Hop til næste skærm")
                 }
+ 
                 
                 Text("BRAND FARVE").foregroundColor(.brandAccent)
                 
