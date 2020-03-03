@@ -16,6 +16,7 @@
 		AF786441240EE4E8001BB78C /* IgnoredSwiftUIFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF786440240EE4E8001BB78C /* IgnoredSwiftUIFile.swift */; };
 		AF786444240EE540001BB78C /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF786443240EE540001BB78C /* UserSession.swift */; };
 		AF786447240EE5C9001BB78C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF786446240EE5C9001BB78C /* LoginView.swift */; };
+		AF78644A240EECF5001BB78C /* Color+BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF786449240EECF5001BB78C /* Color+BrandColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AF786440240EE4E8001BB78C /* IgnoredSwiftUIFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoredSwiftUIFile.swift; sourceTree = "<group>"; };
 		AF786443240EE540001BB78C /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		AF786446240EE5C9001BB78C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AF786449240EECF5001BB78C /* Color+BrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+BrandColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		AF78642A240EE334001BB78C /* Vims */ = {
 			isa = PBXGroup;
 			children = (
+				AF786448240EECC2001BB78C /* Extensions */,
 				AF786445240EE5A9001BB78C /* Views */,
 				AF786442240EE507001BB78C /* Models */,
 				AF78643F240EE4B9001BB78C /* IgnoredFiles */,
@@ -106,6 +109,14 @@
 				AF786446240EE5C9001BB78C /* LoginView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AF786448240EECC2001BB78C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF786449240EECF5001BB78C /* Color+BrandColors.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF78644A240EECF5001BB78C /* Color+BrandColors.swift in Sources */,
 				AF786447240EE5C9001BB78C /* LoginView.swift in Sources */,
 				AF78642C240EE334001BB78C /* AppDelegate.swift in Sources */,
 				AF786444240EE540001BB78C /* UserSession.swift in Sources */,
