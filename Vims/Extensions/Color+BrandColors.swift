@@ -14,5 +14,6 @@ extension Color {
     static let brandAccentSec = Color("BrandAccentSecondaryColor")
     static let brandAction = Color("BrandActionColor")
     static let brandBackground = Color("BrandBackgroundColor")
+    static let brandBackgroundBorder = Color("BrandBackgroundFrameColor")
     static let brandLightGray = Color("BrandLightGray")
 }
