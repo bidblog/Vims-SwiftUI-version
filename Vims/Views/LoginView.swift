@@ -15,6 +15,18 @@ struct LoginView: View {
     @State private var userName : String = ""
     @State private var userPassword : String = ""
     
+    private var notReadyForLogin : Bool {
+        return self.userName.isEmpty || self.userPassword.isEmpty
+    }
+    
+    private var buttonColor : Color {
+        if self.notReadyForLogin {
+            return Color.brandLightGray
+        }
+        
+        return Color.brandAction
+    }
+    
     var body: some View {
         
         VStack {
@@ -27,27 +39,34 @@ struct LoginView: View {
             HStack {
                 VStack {
                     
-                    TextField("Brugernavn", text: $userName).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
+                    TextField("Brugernavn",
+                              text: $userName) {
+                                self.userSession.logIn(UserAuth(userName: self.userName, password: self.userPassword))
+                    }.textFieldStyle(RoundedBorderTextFieldStyle()).padding()
                         .padding(.top, 40)
+                    
+                    /*
+                     TextField("Brugernavn", text: $userName).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
+                     .padding(.top, 40)
+                     */
                     
                     SecureField("Password", text: $userPassword).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
                     
                     Button(action: {
+                        self.userSession.logIn(UserAuth(userName: self.userName, password: self.userPassword))
                         
-                        
-                        self.userSession.logIn()
-                    
                     }) {
                         Text ("Log ind")
                             .font(.title)
                             .foregroundColor(.white)
+                            .padding([.leading, .trailing], 100)
+                            .padding([.top, .bottom], 10)
+                            .background(buttonColor)
+                            .cornerRadius(5.0)
+                            .shadow(radius: 4.0)
+                            .padding(.bottom, 50)
                         
-                    }.padding([.leading, .trailing], 100)
-                        .padding([.top, .bottom], 10)
-                    .background(Color.brandAction)
-                        .cornerRadius(5.0)
-                        .shadow(radius: 4.0)
-                        .padding(.bottom, 50)
+                    }.disabled(self.notReadyForLogin)
                     
                 }.background(Color.brandLightGray)
                     .cornerRadius(25.0)
