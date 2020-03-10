@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3D7C8224181DDC0093685F /* ChoosePickListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7C8124181DDC0093685F /* ChoosePickListView.swift */; };
+		AF3D7C8424181E660093685F /* NotLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D7C8324181E660093685F /* NotLoggedInView.swift */; };
 		AF78642C240EE334001BB78C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78642B240EE334001BB78C /* AppDelegate.swift */; };
 		AF78642E240EE334001BB78C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78642D240EE334001BB78C /* SceneDelegate.swift */; };
 		AF786430240EE334001BB78C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78642F240EE334001BB78C /* ContentView.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3D7C8124181DDC0093685F /* ChoosePickListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePickListView.swift; sourceTree = "<group>"; };
+		AF3D7C8324181E660093685F /* NotLoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoggedInView.swift; sourceTree = "<group>"; };
 		AF786428240EE334001BB78C /* Vims.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vims.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF78642B240EE334001BB78C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF78642D240EE334001BB78C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				AF786446240EE5C9001BB78C /* LoginView.swift */,
+				AF3D7C8124181DDC0093685F /* ChoosePickListView.swift */,
+				AF3D7C8324181E660093685F /* NotLoggedInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,9 +198,11 @@
 			files = (
 				AF78644A240EECF5001BB78C /* Color+BrandColors.swift in Sources */,
 				AF786447240EE5C9001BB78C /* LoginView.swift in Sources */,
+				AF3D7C8224181DDC0093685F /* ChoosePickListView.swift in Sources */,
 				AF78642C240EE334001BB78C /* AppDelegate.swift in Sources */,
 				AF786444240EE540001BB78C /* UserSession.swift in Sources */,
 				AF78642E240EE334001BB78C /* SceneDelegate.swift in Sources */,
+				AF3D7C8424181E660093685F /* NotLoggedInView.swift in Sources */,
 				AF786441240EE4E8001BB78C /* IgnoredSwiftUIFile.swift in Sources */,
 				AF786430240EE334001BB78C /* ContentView.swift in Sources */,
 			);
