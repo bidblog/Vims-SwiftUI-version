@@ -8,10 +8,26 @@
 
 import SwiftUI
 
-struct NumberBoxView: View {
-    var body: some View {
+struct NumberBoxView: View{
 
-        ZStack {
+    @Binding var numberOfProducts : Int
+
+    var body: some View {
+        
+        let numberText = Binding<String> (
+            get: {
+                if self.numberOfProducts == 0 {
+                    return ""
+                }
+                return String(self.numberOfProducts)
+        },
+            set: {
+                // Do Nothing
+                print ("BadgeString \($0)")
+        }
+        )
+
+        return ZStack {
             Image(systemName: "cube.box")
                 .font(Font.system(size: 58.0))
                 .foregroundColor(.brandBackgroundBorder)
@@ -19,22 +35,20 @@ struct NumberBoxView: View {
             Image(systemName: "cube.box.fill")
                 .font(Font.system(size: 51.0))
                 .foregroundColor(.brandBackground)
+            
+            BadgeView(badgeText: numberText)
 
         }
-        /*
-        RoundedRectangle(cornerRadius: 5.0).frame(width:52.0, height:52.0).foregroundColor(.brandBackground)
-         */
-
     }
 }
 
 struct NumberBoxView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            NumberBoxView().previewLayout(.fixed(width: 80.0, height: 80.0))
+            NumberBoxView(numberOfProducts: .constant(4711)).previewLayout(.fixed(width: 80.0, height: 80.0))
                 .previewDisplayName("View")
             
-            NumberBoxView().previewLayout(.fixed(width: 375.0, height: 80.0))
+            NumberBoxView(numberOfProducts: .constant(4712)).previewLayout(.fixed(width: 375.0, height: 80.0))
                 .padding(.trailing, 300)
             .previewDisplayName("Tabel Cell Example")
         }
