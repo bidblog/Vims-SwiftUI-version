@@ -21,6 +21,7 @@
 		AF786444240EE540001BB78C /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF786443240EE540001BB78C /* UserSession.swift */; };
 		AF786447240EE5C9001BB78C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF786446240EE5C9001BB78C /* LoginView.swift */; };
 		AF78644A240EECF5001BB78C /* Color+BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF786449240EECF5001BB78C /* Color+BrandColors.swift */; };
+		AFA2618E24215E4E003A6FB5 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2618D24215E4D003A6FB5 /* BadgeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AF786443240EE540001BB78C /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		AF786446240EE5C9001BB78C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AF786449240EECF5001BB78C /* Color+BrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+BrandColors.swift"; sourceTree = "<group>"; };
+		AFA2618D24215E4D003A6FB5 /* BadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				AF3D7C8124181DDC0093685F /* ChoosePickListView.swift */,
 				AF3D7C8324181E660093685F /* NotLoggedInView.swift */,
 				AF3D7C8724182D490093685F /* NumberBoxView.swift */,
+				AFA2618D24215E4D003A6FB5 /* BadgeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA2618E24215E4E003A6FB5 /* BadgeView.swift in Sources */,
 				AF3D7C862418282D0093685F /* UserAuth.swift in Sources */,
 				AF78644A240EECF5001BB78C /* Color+BrandColors.swift in Sources */,
 				AF786447240EE5C9001BB78C /* LoginView.swift in Sources */,

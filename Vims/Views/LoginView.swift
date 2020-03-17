@@ -12,6 +12,10 @@ struct LoginView: View {
     
     @EnvironmentObject var userSession : UserSession
     
+    // Code to perform after successfull Login
+    var onSuccesfullLogin : (() -> Void)?
+    
+    
     @State private var userName : String = ""
     @State private var userPassword : String = ""
     
@@ -26,6 +30,17 @@ struct LoginView: View {
         
         return Color.brandAction
     }
+    
+    //MARK: Initializers
+    init() {
+        
+    }
+        
+    init(onSuccessfullLogin onLogin: @escaping ()->Void ) {
+        self.init()
+        self.onSuccesfullLogin = onLogin
+    }
+    
     
     var body: some View {
         
@@ -42,6 +57,13 @@ struct LoginView: View {
                     TextField("Brugernavn",
                               text: $userName) {
                                 self.userSession.logIn(UserAuth(userName: self.userName, password: self.userPassword))
+                                
+                                if (self.userSession.isUserLoggedIn) {
+                                    // Call the closure after successful login
+                                    if let postLogin = self.onSuccesfullLogin {
+                                        postLogin()
+                                    }
+                                }
                     }.textFieldStyle(RoundedBorderTextFieldStyle()).padding()
                         .padding(.top, 40)
                     
@@ -54,6 +76,11 @@ struct LoginView: View {
                     
                     Button(action: {
                         self.userSession.logIn(UserAuth(userName: self.userName, password: self.userPassword))
+                        
+                        // Call the closure after successful login
+                        if let postLogin = self.onSuccesfullLogin {
+                            postLogin()
+                        }
                         
                     }) {
                         Text ("Log ind")

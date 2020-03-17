@@ -51,10 +51,13 @@ struct NotLoggedInView: View {
                     .shadow(radius: 4.0)
                     .padding(.top, 30)
                 
-            }.sheet(isPresented: .constant(self.showTheSheet)) {
-                LoginView().environmentObject(self.userSession)
+            }
+            .sheet(isPresented: $showingLoginSheet) {
                 
-                //TODO: Skift til den anden isPresented.
+                LoginView {
+                    self.showingLoginSheet = false
+                }.environmentObject(self.userSession)
+
             }
         }
         
