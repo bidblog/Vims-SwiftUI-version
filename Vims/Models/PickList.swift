@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct PickList: Identifiable {
+class PickList: Identifiable, ObservableObject {
     public let id = UUID()
     public let salesOrder : SalesOrder
-    public var toBePicked = 0
+    @Published public var toBePicked = 0
     
     init(salesOrder: SalesOrder, toBePicked:Int) {
         self.salesOrder = salesOrder

@@ -11,14 +11,16 @@ import SwiftUI
 struct ChoosePickListView: View {
     
     @EnvironmentObject var userSession : UserSession
-    
+      
     var body: some View {
         
-        VStack {
+        return VStack {
+                   
+            
             if !userSession.isUserLoggedIn {
                 NotLoggedInView()
             } else {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                PickListView()
             }
             
             EmptyView()
@@ -33,6 +35,9 @@ struct ChoosePickListView_Previews: PreviewProvider {
     static let userSession = UserSession()
     
     static var previews: some View {
-        ChoosePickListView().environmentObject(userSession)
+        
+        userSession.isUserLoggedIn = true
+        
+    return ChoosePickListView().environmentObject(userSession)
     }
 }
